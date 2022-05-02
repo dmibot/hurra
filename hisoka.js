@@ -315,15 +315,12 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 	    }
 	    let winner = isSurrender ? room.game.currentTurn : room.game.winner
 	    let str = `Room ID: ${room.id}
-
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
-
 ${isWin ? `@${winner.split('@')[0]} Menang!` : isTie ? `Game berakhir` : `Giliran ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
-
 Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 	    if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
 	    room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
@@ -351,10 +348,8 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
 	    clearTimeout(roof.waktu)
 	    //delete roof[roof.id].waktu
 	    hisoka.sendText(m.chat, `Suit telah dikirimkan ke chat
-
 @${roof.p.split`@`[0]} dan 
 @${roof.p2.split`@`[0]}
-
 Silahkan pilih suit di chat masing"
 klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] })
 	    if (!roof.pilih) hisoka.sendText(roof.p, `Silahkan pilih \n\nBatu🗿\nKertas📄\nGunting✂️`, m)
@@ -399,7 +394,6 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
 	    else if (k.test(stage) && g.test(stage2)) win = roof.p2
 	    else if (stage == stage2) tie = true
 	    hisoka.sendText(roof.asal, `_*Hasil Suit*_${tie ? '\nSERI' : ''}
-
 @${roof.p.split`@`[0]} (${roof.text}) ${tie ? '' : roof.p == win ? ` Menang \n` : ` Kalah \n`}
 @${roof.p2.split`@`[0]} (${roof.text2}) ${tie ? '' : roof.p2 == win ? ` Menang \n` : ` Kalah \n`}
 `.trim(), m, { mentions: [roof.p, roof.p2] })
@@ -465,13 +459,10 @@ Selama ${clockString(new Date - user.afkTime)}
             }[v]
             })
             let str = `Room ID: ${room.id}
-
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
-
 Menunggu @${room.game.currentTurn.split('@')[0]}
-
 Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             if (room.x !== room.o) await hisoka.sendText(room.x, str, m, { mentions: parseMention(str) } )
             await hisoka.sendText(room.o, str, m, { mentions: parseMention(str) } )
@@ -514,9 +505,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) throw `Orang yang kamu tantang sedang bermain suit bersama orang lain :(`
             let id = 'suit_' + new Date() * 1
             let caption = `_*SUIT PvP*_
-
 @${m.sender.split`@`[0]} menantang @${m.mentionedJid[0].split`@`[0]} untuk bermain suit
-
 Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             this.suit[id] = {
             chat: await hisoka.sendText(m.chat, caption, m, { mentions: parseMention(caption) }),
@@ -532,11 +521,11 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
 	    case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f09f40f4a37713f73de30.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n` }, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74fd634010128be37972c.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6288292024190 (Owner)\n\nDonate For Me : \n\n⭔ Paypal : https://www.paypal.me/Cakhaho\n⭔ Saweria : https://saweria.co/DikaArdnt` }, { quoted: m })
             }
             break
             case 'sc': {
-                m.reply('Script : https://github.com/dmibot/hurra\n\n Dont Forget Give Star')
+                m.reply('Script : https://github.com/DikaArdnt/Hisoka-Morou\n\n Dont Forget Give Star\n\nDonate : 6281615075793 (Link Aja)\nSaweria : https://saweria.co/DikaArdnt\nPaypal : https://www.paypal.me/Cakhaho\n\n Dont Forget Donate')
             }
             break
             case 'chat': {
@@ -690,7 +679,6 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `👫Jodoh mu adalah
-
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
             let buttons = [
@@ -705,7 +693,6 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `Ciee yang Jadian💖 Jangan lupa pajak jadiannya🐤
-
 @${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let menst = [orang, jodoh]
             let buttons = [
@@ -871,23 +858,19 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
             upvote = vote[m.chat][1]
             devote = vote[m.chat][2]
             teks_vote = `*「 VOTE 」*
-
 *Alasan:* ${vote[m.chat][0]}
-
 ┌〔 UPVOTE 〕
 │ 
 ├ Total: ${vote[m.chat][1].length}
 │
 │ 
 └────
-
 ┌〔 DEVOTE 〕
 │ 
 ├ Total: ${vote[m.chat][2].length}
 │
 │ 
 └────
-
 *${prefix}hapusvote* - untuk menghapus vote`
 let buttonsVote = [
   {buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
@@ -912,23 +895,19 @@ let buttonsVote = [
             vote[m.chat][1].push(m.sender)
             menvote = vote[m.chat][1].concat(vote[m.chat][2])
             teks_vote = `*「 VOTE 」*
-
 *Alasan:* ${vote[m.chat][0]}
-
 ┌〔 UPVOTE 〕
 │ 
 ├ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
-
 ┌〔 DEVOTE 〕
 │ 
 ├ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
-
 *${prefix}hapusvote* - untuk menghapus vote`
             let buttonsUpvote = [
               {buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
@@ -954,23 +933,19 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
             vote[m.chat][2].push(m.sender)
             menvote = vote[m.chat][1].concat(vote[m.chat][2])
             teks_vote = `*「 VOTE 」*
-
 *Alasan:* ${vote[m.chat][0]}
-
 ┌〔 UPVOTE 〕
 │ 
 ├ Total: ${vote[m.chat][1].length}
 ${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
-
 ┌〔 DEVOTE 〕
 │ 
 ├ Total: ${vote[m.chat][2].length}
 ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
-
 *${prefix}hapusvote* - untuk menghapus vote`
             let buttonsDevote = [
               {buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
@@ -992,26 +967,20 @@ case 'cekvote':
 if (!m.isGroup) throw mess.group
 if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
 teks_vote = `*「 VOTE 」*
-
 *Alasan:* ${vote[m.chat][0]}
-
 ┌〔 UPVOTE 〕
 │ 
 ├ Total: ${upvote.length}
 ${vote[m.chat][1].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
-
 ┌〔 DEVOTE 〕
 │ 
 ├ Total: ${devote.length}
 ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
-
 *${prefix}hapusvote* - untuk menghapus vote
-
-
 ©${hisoka.user.id}
 `
 hisoka.sendTextWithMentions(m.chat, teks_vote, m)
@@ -1138,13 +1107,13 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Follow Me',
-                                    url: 'https://instagram.com/tammyartha'
+                                    displayText: 'Source Code',
+                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 811-666-884'
+                                    phoneNumber: '+62 882-9202-4190'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1177,13 +1146,13 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Follow Me',
-                                    url: 'https://instagram.com/tammyartha'
+                                    displayText: 'Source Code',
+                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 811-666-884'
+                                    phoneNumber: '+62 882-9202-4190'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1309,7 +1278,6 @@ break
 	       case 'attp': case 'ttp': {
            if (!text) throw `Example : ${prefix + command} text`
            await hisoka.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
-
          }
          break
 	       case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
@@ -1453,7 +1421,7 @@ break
             }
             break
         case 'google': {
-                if (!text) throw `Example : ${prefix + command} tammy artha`
+                if (!text) throw `Example : ${prefix + command} fatih arridho`
                 let google = require('google-it')
                 google({'query': text}).then(res => {
                 let teks = `Google Search From : ${text}\n\n`
@@ -2189,7 +2157,6 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 		hisoka.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
 		} else {
 		m.reply(`Mau format apa ? Example : ${prefix + command} pdf
-
 Format yang tersedia : pdf, docx, pptx, xlsx`)
 		}
 		}
@@ -2198,7 +2165,6 @@ Format yang tersedia : pdf, docx, pptx, xlsx`)
 		if (!args[0]) throw `Contoh:
 ${prefix + command} bukhari 1
 ${prefix + command} abu-daud 1
-
 Pilihan tersedia:
 abu-daud
 1 - 4590
@@ -2221,9 +2187,7 @@ muslim
 		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/${args[0]}`)
 		let { number, arab, id } = res.find(v => v.number == args[1])
 		m.reply(`No. ${number}
-
 ${arab}
-
 ${id}`)
 		} catch (e) {
 		m.reply(`Hadis tidak ditemukan !`)
@@ -2237,7 +2201,6 @@ ${id}`)
 		let txt = `*Arab* : ${res.result.data.text.arab}
 *English* : ${res.result.data.translation.en}
 *Indonesia* : ${res.result.data.translation.id}
-
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
 		m.reply(txt)
 		hisoka.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : m })
@@ -2248,11 +2211,8 @@ ${id}`)
 		if (!args[1]) throw `Contoh penggunaan:\n${prefix + command} 1 2\n\nmaka hasilnya adalah tafsir surah Al-Fatihah ayat 2`
 		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
 		let txt = `「 *Tafsir Surah*  」
-
 *Pendek* : ${res.result.data.tafsir.id.short}
-
 *Panjang* : ${res.result.data.tafsir.id.long}
-
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
 		m.reply(txt)
 		}
@@ -2340,7 +2300,6 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
 m.reply(`Berhasil menambahkan pesan di list pesan sebagai '${text}'
     
 Akses dengan ${prefix}getmsg ${text}
-
 Lihat list Pesan Dengan ${prefix}listmsg`)
             }
             break
@@ -2524,13 +2483,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 oldd = performance.now()
                 respon = `
 Kecepatan Respon ${latensi.toFixed(4)} _Second_ \n ${oldd - neww} _miliseconds_\n\nRuntime : ${runtime(process.uptime())}
-
 💻 Info Server
 RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-
 _NodeJS Memory Usaage_
 ${Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${formatp(used[key])}`).join('\n')}
-
 ${cpus[0] ? `_Total CPU Usage_
 ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
@@ -2560,6 +2516,119 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 hisoka.sendContact(m.chat, global.owner, m)
             }
             break
+            case 'playstore': {
+            if (!text) throw `Example : ${prefix + command} clash of clans`
+            let res = await fetchJson(api('zenz', '/webzone/playstore', { query: text }, 'apikey'))
+            let teks = `⭔ Playstore Search From : ${text}\n\n`
+            for (let i of res.result) {
+            teks += `⭔ Name : ${i.name}\n`
+            teks += `⭔ Link : ${i.link}\n`
+            teks += `⭔ Developer : ${i.developer}\n`
+            teks += `⭔ Link Developer : ${i.link_dev}\n\n──────────────────────\n`
+            }
+            m.reply(teks)
+            }
+            break
+            case 'gsmarena': {
+            if (!text) throw `Example : ${prefix + command} samsung`
+            let res = await fetchJson(api('zenz', '/webzone/gsmarena', { query: text }, 'apikey'))
+            let { judul, rilis, thumb, ukuran, type, storage, display, inchi, pixel, videoPixel, ram, chipset, batrai, merek_batre, detail } = res.result
+let capt = `⭔ Title: ${judul}
+⭔ Realease: ${rilis}
+⭔ Size: ${ukuran}
+⭔ Type: ${type}
+⭔ Storage: ${storage}
+⭔ Display: ${display}
+⭔ Inchi: ${inchi}
+⭔ Pixel: ${pixel}
+⭔ Video Pixel: ${videoPixel}
+⭔ Ram: ${ram}
+⭔ Chipset: ${chipset}
+⭔ Battery: ${batrai}
+⭔ Battery Brand: ${merek_batre}
+⭔ Detail: ${detail}`
+            hisoka.sendImage(m.chat, thumb, capt, m)
+            }
+            break
+            case 'jadwalbioskop': {
+            if (!text) throw `Example: ${prefix + command} jakarta`
+            let res = await fetchJson(api('zenz', '/webzone/jadwalbioskop', { kota: text }, 'apikey'))
+            let capt = `Jadwal Bioskop From : ${text}\n\n`
+            for (let i of res.result){
+            capt += `⭔ Title: ${i.title}\n`
+            capt += `⭔ Thumbnail: ${i.thumb}\n`
+            capt += `⭔ Url: ${i.url}\n\n──────────────────────\n`
+            }
+            hisoka.sendImage(m.chat, res.result[0].thumb, capt, m)
+            }
+            break
+            case 'nowplayingbioskop': {
+            let res = await fetchJson(api('zenz', '/webzone/nowplayingbioskop', {}, 'apikey'))
+            let capt = `Now Playing Bioskop\n\n`
+            for (let i of res.result){
+            capt += `⭔ Title: ${i.title}\n`
+            capt += `⭔ Url: ${i.url}\n`
+            capt += `⭔ Img Url: ${i.img}\n\n──────────────────────\n`
+            }
+            hisoka.sendImage(m.chat, res.result[0].img, capt, m)
+            }
+            break
+            case 'aminio': {
+            if (!text) throw `Example: ${prefix + command} free fire`
+            let res = await fetchJson(api('zenz', '/webzone/amino', { query: text }, 'apikey'))
+            let capt = `Amino Search From : ${text}\n\n`
+            for (let i of res.result){
+            capt += `⭔ Community: ${i.community}\n`
+            capt += `⭔ Community Link: ${i.community_link}\n`
+            capt += `⭔ Thumbnail: ${i.community_thumb}\n`
+            capt += `⭔ Description: ${i.community_desc}\n`
+            capt += `⭔ Member Count: ${i.member_count}\n\n──────────────────────\n`
+            }
+            hisoka.sendImage(m.chat, 'https://'+res.result[0].community_thumb, capt, m)
+            }
+            break
+            case 'wattpad': {
+            if (!text) throw `Example : ${prefix + command} love`
+            let res = await fetchJson(api('zenz', '/webzone/wattpad', { query: text }, 'apikey'))
+            let { judul, dibaca, divote, bab, waktu, url, thumb, description } = res.result[0]
+            let capt = `Wattpad From query\n\n`
+            capt += `⭔ Judul: ${judul}\n`
+            capt += `⭔ Dibaca: ${dibaca}\n`
+            capt += `⭔ Divote: ${divote}\n`
+            capt += `⭔ Bab: ${bab}\n`
+            capt += `⭔ Url: ${url}\n`
+            capt += `⭔ Deskripsi: ${description}`
+            hisoka.sendImage(m.chat, thumb, capt, m)
+            }
+            break
+            case 'webtoons': {
+            if (!text) throw `Example : ${prefix + command} love`
+            let res = await fetchJson(api('zenz', '/webzone/webtoons', { query: text }, 'apikey'))
+            let capt = `Webtoons Search From : ${text}\n\n`
+            for (let i of res.result) {
+            capt += `⭔ Judul: ${i.judul}\n`
+            capt += `⭔ Like: ${i.like}\n`
+            capt += `⭔ Creator: ${i.creator}\n`
+            capt += `⭔ Genre: ${i.genre}\n`
+            capt += `⭔ Url: ${i.url}\n\n──────────────────────\n`
+            }
+            m.reply(capt)
+            }
+            break
+            case 'drakor': {
+            if (!text) throw `Example : ${prefix + command} love`
+            let res = await fetchJson(api('zenz', '/webzone/drakor', { query: text }, 'apikey'))
+            let capt = `Drakor Search From : ${text}\n\n`
+            for (let i of res.result) {
+            capt += `⭔ Judul: ${i.judul}\n`
+            capt += `⭔ Years: ${i.years}\n`
+            capt += `⭔ Genre: ${i.genre}\n`
+            capt += `⭔ Url: ${i.url}\n`
+            capt += `⭔ Thumbnail Url: ${i.thumbnail}\n\n──────────────────────\n`
+            }
+            hisoka.sendImage(m.chat, res.result[0].thumbnail, capt, m)
+            }
+            break
             case 'list': case 'menu': case 'help': case '?': {
                 anu = `┌──⭓ *Group Menu*
 │
@@ -2585,7 +2654,18 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}hapusvote
 │
 └───────⭓
-
+┌──⭓ *Webzone Menu*
+│
+│⭔ ${prefix}playstore
+│⭔ ${prefix}gsmarena
+│⭔ ${prefix}jadwalbioskop
+│⭔ ${prefix}nowplayingbioskop
+│⭔ ${prefix}aminio
+│⭔ ${prefix}wattpad
+│⭔ ${prefix}webtoons
+│⭔ ${prefix}drakor
+│
+└───────⭓
 ┌──⭓ *Downloader Menu*
 │
 │⭔ ${prefix}tiktoknowm [url]
@@ -2605,7 +2685,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}soundcloud [url]
 │
 └───────⭓
-
 ┌──⭓ *Search Menu*
 │
 │⭔ ${prefix}play [query]
@@ -2620,7 +2699,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}stalk [option] [query]
 │
 └───────⭓
-
 ┌──⭓ *Random Menu*
 │
 │⭔ ${prefix}coffe
@@ -2642,7 +2720,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}blowjob (nsfw)
 │
 └───────⭓
-
 ┌──⭓ *Text Pro Menu*
 │
 │⭔ ${prefix}3dchristmas
@@ -2678,7 +2755,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}gluetext
 │
 └───────⭓
-
 ┌──⭓ *Photo Oxy Menu*
 │
 │⭔ ${prefix}shadow
@@ -2695,7 +2771,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}retrolol
 │
 └───────⭓
-
 ┌──⭓ *Ephoto Menu*
 │
 │⭔ ${prefix}ffcover
@@ -2709,7 +2784,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}ytcertificate
 │
 └───────⭓
-
 ┌──⭓ *Fun Menu*
 │
 │⭔ ${prefix}simih
@@ -2728,7 +2802,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}suitpvp [@tag]
 │
 └───────⭓
-
 ┌──⭓ *Primbon Menu*
 │
 │⭔ ${prefix}nomorhoki
@@ -2763,7 +2836,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}shio
 │
 └───────⭓
-
 ┌──⭓ *Convert Menu*
 │
 │⭔ ${prefix}attp
@@ -2785,7 +2857,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}smeme
 │
 └───────⭓
-
 ┌──⭓ *Main Menu*
 │
 │⭔ ${prefix}ping
@@ -2800,7 +2871,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}speedtest
 │
 └───────⭓
-
 ┌──⭓ *Database Menu*
 │
 │⭔ ${prefix}setcmd
@@ -2813,7 +2883,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}delmsg
 │
 └───────⭓
-
 ┌──⭓ *Anonymous Menu*
 │
 │⭔ ${prefix}anonymous
@@ -2822,7 +2891,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}keluar
 │
 └───────⭓
-
 ┌──⭓ *Islamic Menu*
 │
 │⭔ ${prefix}iqra
@@ -2832,7 +2900,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}tafsirsurah
 │
 └───────⭓
-
 ┌──⭓ *Voice Changer*
 │
 │⭔ ${prefix}bass
@@ -2848,7 +2915,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}tupai
 │
 └───────⭓
-
 ┌──⭓ *Owner Menu*
 │
 │⭔ ${prefix}react [emoji]
@@ -2865,13 +2931,13 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 └───────⭓`
                 let btn = [{
                                 urlButton: {
-                                    displayText: 'Follow Me',
-                                    url: 'https://instagram.com/tammyartha'
+                                    displayText: 'Source Code',
+                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 811-666-884'
+                                    phoneNumber: '+62 882-9202-4190'
                                 }
                             }, {
                                 quickReplyButton: {
