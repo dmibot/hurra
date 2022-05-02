@@ -521,11 +521,11 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
 	    case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/f09f40f4a37713f73de30.jpg' }, caption: `*Hai  ${m.pushName}*\n\n Bot ini bikinan Dika\n\nJangan Lupa Sadaqah\nOrang Pelit Kuburannya Sempit` }, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'https://miro.medium.com/max/1156/1*CmSAixMnCphxfU7R7_rKRw.png' }, caption: `*Halo ${m.pushName}*\n\nBersedekahlah Kawan\nBantulah Anak Yatim dan Fakir Miskin\n\nOrang Pelit Kuburannya Sempit` }, { quoted: m })
             }
             break
             case 'sc': {
-                m.reply('Script : https://github.com/DikaArdnt/Hisoka-Morou\n\n Dont Forget Give Star\n\nDonate : 6281615075793 (Link Aja)\nSaweria : https://saweria.co/DikaArdnt\nPaypal : https://www.paypal.me/Cakhaho\n\n Dont Forget Donate')
+                m.reply('Script : https://instagram.com/tammyartha\n\n Dont Forget Give Star\n\nDonasi? : Bantulah Anak Yatim dan Fakir Miskin')
             }
             break
             case 'chat': {
@@ -1107,13 +1107,13 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    displayText: 'Follow Me',
+                                    url: 'https://instagram.com/tammyartha'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 882-9202-4190'
+                                    phoneNumber: '+62 851-7220-6884'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1146,13 +1146,13 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    displayText: 'Follow Me',
+                                    url: 'https://instagram.com/tammyartha'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 882-9202-4190'
+                                    phoneNumber: '+62 851-7220-6884'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2931,13 +2931,13 @@ let capt = `⭔ Title: ${judul}
 └───────⭓`
                 let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    displayText: 'Follow Me',
+                                    url: 'https://instagram.com/tammyartha'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 882-9202-4190'
+                                    phoneNumber: '+62 851-7220-6884'
                                 }
                             }, {
                                 quickReplyButton: {
