@@ -2708,21 +2708,10 @@ let capt = `⭔ Title: ${judul}
 │⭔ ${prefix}bucinquote
 │⭔ ${prefix}katasenja
 │⭔ ${prefix}puisi
-│⭔ ${prefix}couple
-│⭔ ${prefix}anime
-│⭔ ${prefix}waifu
-│⭔ ${prefix}husbu
-│⭔ ${prefix}neko
-│⭔ ${prefix}shinobu
-│⭔ ${prefix}waifus (nsfw)
-│⭔ ${prefix}nekos (nsfw)
-│⭔ ${prefix}trap (nsfw)
-│⭔ ${prefix}blowjob (nsfw)
 │
 └───────⭓
 ┌──⭓ *Text Pro Menu*
 │
-│⭔ ${prefix}3dchristmas
 │⭔ ${prefix}3ddeepsea
 │⭔ ${prefix}americanflag
 │⭔ ${prefix}3dscifi
@@ -2792,8 +2781,6 @@ let capt = `⭔ Title: ${judul}
 │⭔ ${prefix}huluh
 │⭔ ${prefix}heleh
 │⭔ ${prefix}holoh
-│⭔ ${prefix}jadian
-│⭔ ${prefix}jodohku
 │⭔ ${prefix}delttt
 │⭔ ${prefix}tictactoe
 │⭔ ${prefix}family100
@@ -2802,40 +2789,7 @@ let capt = `⭔ Title: ${judul}
 │⭔ ${prefix}suitpvp [@tag]
 │
 └───────⭓
-┌──⭓ *Primbon Menu*
-│
-│⭔ ${prefix}nomorhoki
-│⭔ ${prefix}artimimpi
-│⭔ ${prefix}artinama
-│⭔ ${prefix}ramaljodoh
-│⭔ ${prefix}ramaljodohbali
-│⭔ ${prefix}suamiistri
-│⭔ ${prefix}ramalcinta
-│⭔ ${prefix}cocoknama
-│⭔ ${prefix}pasangan
-│⭔ ${prefix}jadiannikah
-│⭔ ${prefix}sifatusaha
-│⭔ ${prefix}rezeki
-│⭔ ${prefix}pekerjaan
-│⭔ ${prefix}nasib
-│⭔ ${prefix}penyakit
-│⭔ ${prefix}tarot
-│⭔ ${prefix}fengshui
-│⭔ ${prefix}haribaik
-│⭔ ${prefix}harisangar
-│⭔ ${prefix}harisial
-│⭔ ${prefix}nagahari
-│⭔ ${prefix}arahrezeki
-│⭔ ${prefix}peruntungan
-│⭔ ${prefix}weton
-│⭔ ${prefix}karakter
-│⭔ ${prefix}keberuntungan
-│⭔ ${prefix}memancing
-│⭔ ${prefix}masasubur
-│⭔ ${prefix}zodiak
-│⭔ ${prefix}shio
-│
-└───────⭓
+
 ┌──⭓ *Convert Menu*
 │
 │⭔ ${prefix}attp
